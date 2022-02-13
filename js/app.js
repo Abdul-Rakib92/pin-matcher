@@ -31,4 +31,22 @@ document.getElementById('key-pad').addEventListener('click', function(event){
     }
     
 
-})
+});
+
+function verifyPin(){
+    const pin = document.getElementById('display-pin').value;
+    const typeNumbers = document.getElementById('typed-numbers').value;
+    const notifySuccess = document.getElementById('notify-success');
+    const failError = document.getElementById('notify-fail');
+
+
+    if(pin == typeNumbers){
+        notifySuccess.style.display = 'block';
+        failError.style.display = 'none';
+
+    }
+    else{
+        notifySuccess.style.display = 'none';
+        failError.style.display = 'block';
+    }
+}
